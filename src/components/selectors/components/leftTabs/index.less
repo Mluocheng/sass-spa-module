@@ -1,0 +1,29 @@
+
+@import '~common/less/index.less';
+
+.box{
+  width: 100%;
+  position: relative;
+  .row{
+    min-width: 100px;
+    height: 38px;
+    .font(14px,38px);
+    font-weight:500;
+    color:@font-weak-color;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  .select{
+    color:@font-title-color;
+  }
+
+  .line{
+    width:6px;
+    height:18px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background-color: @primary-color;
+    transition: 0.2s;
+  }
+}

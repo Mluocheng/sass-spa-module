@@ -1,0 +1,49 @@
+@import '~common/less/index.less';
+
+.formItem {
+  overflow: visible;
+  margin-bottom: @spacer * 4;
+
+  &.noMargin {
+    margin-bottom: 0;
+  }
+
+  .label {
+    svg {
+      .font(12px);
+      color: @font-disabled-color;
+      cursor: pointer;
+      margin-left: @spacer;
+    }
+  }
+
+  :global {
+    .ant-form-item-label {
+      overflow: visible;
+      .font(12px);
+      margin-bottom: @spacer;
+    }
+
+    .ant-form-item-label>label {
+      color: @font-title-color;
+      .font(12px);
+      position: relative;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    // .ant-form-item-required::before {
+    //   position: absolute;
+    //   top: 3px;
+    //   left: -15px;
+    // }
+
+    .ant-form-explain {
+      position: absolute;
+      margin-top: 0;
+    }
+
+  }
+}

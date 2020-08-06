@@ -1,0 +1,81 @@
+@import '~common/less/index.less';
+.containerBox {
+  display: flex;
+  align-items: center;
+
+.uploadBox{
+  width: 133px;
+  height: 133px;
+  position: relative;
+  border: 1px solid @border-color;
+  box-sizing: border-box;
+  border-color: @border-color;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .25s;
+  background-color: @font-white-color;
+  >video {
+    max-width: 133px;
+    max-height: 133px;
+  }
+
+  > svg {
+    transition: all .25s;
+    .font(48px);
+    color: @font-disabled-color;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    height: 22px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.24);
+    .font(12px);
+    font-weight: 200;
+    transition: all .25s;
+
+    span {
+      width: 40%;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+  &:hover {
+    border-color: @primary-color;
+    > svg {
+      color: @primary-color;
+    }
+    .btn {
+      bottom: 0px;
+    }
+  }
+
+  &.hasVideo {
+    border-color: @border-color!important;
+  }
+
+  :global {
+    .anticon{
+      font-size: 66px;
+    }
+  }
+}
+.prompt {
+  margin-left: @spacer*2;
+  p {
+    color: @font-disabled-color;
+    line-height: 20px;
+  }
+}
+}

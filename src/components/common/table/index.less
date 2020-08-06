@@ -1,0 +1,131 @@
+@import '~common/less/index.less';
+
+:global {
+    .ant-table-column-title,.src-components-common-table-_table_ieQRtj .src-components-common-table-_tableHeader_2jl5_s .ant-table-thead th {
+        background-color: @list-bg-color !important;
+    }
+}
+.table {
+  color: red;
+  flex: auto;
+  position: relative;
+  width: 100%;
+  // height: 500px;
+  .searchBar {
+    display: flex;
+
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: @spacer;
+
+    .searchBtns {
+    
+      button {
+        margin-right: @spacer;
+      }
+
+    }
+  }
+
+  .tableHeader {
+
+    :global {
+      .ant-table-thead > tr > th .ant-table-column-sorter .ant-table-column-sorter-inner-full {
+        margin-top: -0.5em;
+        margin-left: 0.3em;
+      }
+      .ant-table-thead {
+        .font(12px);
+        padding: 0 @spacer;
+  
+        th {
+          height: 30px;
+          // background-color: @list-bg-color ;
+          color: @font-title-color;
+          padding: 0 @spacer;
+          border-bottom: none;
+        }
+      }
+      .ant-table-placeholder {
+        display: none;
+      }
+      .ant-table-tbody {
+        display: none;
+      }
+      .ant-table-tbody > tr.ant-table-row-selected td {
+        // background-color: transparent;
+      }
+      .ant-checkbox {
+        top: 0;
+      }
+    }
+  }
+
+  .tableBody {
+    margin-top: @spacer * .5;
+    // padding-bottom: 34px;
+
+    :global {
+      .ant-table {
+        .font(12px);
+      }
+      .ant-table-tbody {
+
+        >tr:first-child {
+          margin-top: @spacer * .5;
+          >td {
+            border-top: 1px solid @line-color;
+          }
+        }
+
+        >tr {
+          height: 70px;
+
+          &:hover >td {
+            background-color: @list-hover-color !important;
+            // color: red;
+          }
+          
+          >td {
+            min-height: 70px;
+            border-color: @line-color;
+            padding: @spacer;
+          }
+        }
+
+      }
+    }
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 340px;
+        height: 340px;
+    }
+    
+}
+  .empty {
+    margin-top: 15%;
+    text-align: center;
+
+    .imgIcon {
+      width: 500px;
+      height: 500px;
+    }
+    
+    .none {
+      margin-top: @spacer*3;
+    }
+  }
+
+  .pag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

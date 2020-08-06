@@ -1,0 +1,13 @@
+[0327/160124.713:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::LDR_DATA_TABLE_ENTRY<crashpad::process_types::internal::Traits64>]: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0327/160124.715:ERROR:process_info.cc(329)] VirtualQueryEx: 拒绝访问。 (0x5)
+[0327/160124.715:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0327/160124.715:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[0327/164735.528:ERROR:process_info.cc(329)] VirtualQueryEx: 拒绝访问。 (0x5)
+[0327/164735.529:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0327/164735.529:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[0327/202123.694:ERROR:process_info.cc(329)] VirtualQueryEx: 拒绝访问。 (0x5)
+[0327/202123.718:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0327/202123.718:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[0327/210622.691:ERROR:process_reader_win.cc(151)] SuspendThread: 拒绝访问。 (0x5)
+[0327/210622.692:ERROR:exception_snapshot_win.cc(98)] thread ID 8812 not found in process
+[0327/210622.692:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 已尝试访问正在退出的过程。 (0xc000010a)

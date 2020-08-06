@@ -1,0 +1,29 @@
+@import '~common/less/index.less';
+
+.containerBox {
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    // margin-right: @spacer*2;
+    .itemColor {
+      background-color: @font-white-color;
+    }
+    .item {
+      margin-right: @spacer * 2;
+    
+    }
+  }
+  .prompt {
+    margin-left: @spacer*2;
+    min-width: 400px;
+    p {
+      color: @font-disabled-color;
+      line-height: 20px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+}
+

@@ -1,0 +1,140 @@
+@import "~common/less/index.less";
+
+.treeBox {
+  position: relative;
+
+  .searchBox {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+    :global {
+      .ant-input {
+        color: #D5D5D5;
+        border: none !important;
+        outline: none !important;
+        background-color: @list-bg-color  !important;
+      }
+    }
+  }
+
+  .blank {
+    position: absolute;
+    width: 5px;
+    height: 11px;
+    background: #fff;
+    top: 0;
+    left: 10px;
+  }
+
+  .childrenUl {
+    padding-left: @spacer*3;
+    // width: 100%;
+    transition: all .45s;
+    overflow: hidden;
+
+    // &.line {
+    //   background: url('https://img.alicdn.com/imgextra/i3/4074958541/O1CN01iPdSUQ2CxpKt4IE3y_!!4074958541.png') 8.5px 2px repeat-y;
+    // }
+
+    &.visible {
+      height: 0;
+    }
+  }
+
+  .columnLi {
+    // transition: all .45s;
+    list-style-type: none;
+
+    .row {
+      display: flex;
+      white-space: nowrap;
+      align-items: center;
+
+      cursor: pointer;
+
+      >img {
+        width: 28px;
+        // margin-top: -3px;
+      }
+    }
+
+    .title {
+      flex: 1;
+      // margin-left: @spacer * .5;
+      border: none;
+      padding-left: @spacer * .5;
+      .font(12px, 28px);
+      transition: all .45s;
+      white-space: nowrap;
+      height: 50px;
+      line-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &::selection {
+        background: red;
+      }
+
+      &:hover {
+        color: @primary-color;
+        background: #F8F8F8;
+      }
+
+      &.selected {
+        background: #F8F8F8;
+        color: @primary-color;
+      }           
+    }
+    
+    .rightIcon {
+      margin-right: @spacer*2
+    }
+
+    .icon {
+      margin-right: @spacer * .5;
+      font-size: 17px;
+      color: @font-text-color;
+      transition: all .45s;
+
+      &.selected {
+        color: @primary-color;
+      }
+    }
+
+    // .icons{
+    //   font-size: 17px;
+    //   color: red;
+    //   margin-left: -5px;
+    //   margin-top: 9px
+    // }
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 128px;
+  z-index: 1;
+  padding: @spacer * .5 0;
+  //height     : 99px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  text-align: left;
+
+  >p {
+    cursor: pointer;
+    padding-left: 16px;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    transition: .3s;
+    font-size: 12px;
+
+    &:hover {
+      background: rgba(16, 142, 233, .3);
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "~common/less/index.less";
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  min-height: 630px;
+  .left {
+    max-width: 100px;
+  }
+  .right {
+    flex: 1;
+    // position: relative;
+    .search {
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      margin-top: -30px;
+    //   justify-content: flex-end;
+    }
+    .list {
+      margin-top: 10px;
+      list-style: none;
+      min-height: 425px;
+      li {
+        height: 38px;
+        .font(12px);
+        font-weight: 400;
+        color: @font-weak-color;
+        background: @list-title-color;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        cursor: pointer;
+        .transition();
+
+        &:hover {
+          background: @primary-color;
+          color: white;
+        }
+      }
+
+      .select {
+        background: @primary-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.employeesTable {
+    margin-top: @spacer;
+    // overflow-y: scroll;
+    // height: 420px;
+    :global {
+        .ant-table-wrapper:nth-child(2) {
+            .scrollBar();
+            overflow-y: scroll;
+            height: 420px;
+        }
+    }
+}
+
+.pag {
+  float: right;
+  margin-top: @spacer;
+  // position: absolute;
+//   bottom: 20px;
+//   right: 20px;
+}

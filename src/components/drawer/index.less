@@ -1,0 +1,112 @@
+@import "~common/less/index.less";
+.content {
+  // position: relative;
+  .close {
+    top: 50vh;
+    height: 110px;
+    margin-top: -55px;
+    position: absolute;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: white;
+      transform: perspective(0.5em) rotateY(-3deg);
+      box-shadow: -2px 0 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon {
+      .font(12px);
+      position: relative;
+      color: @primary-btn-color;
+      left: -1px;
+    }
+    .retract {
+      display: inline-block;
+      width: 12px;
+      .font(12px);
+      line-height: 1.2;
+      color: #7c8c9b;
+      position: relative;
+      left: 10x;
+    }
+  }
+
+  .titleBox {
+    height: 60px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    .title {
+      margin-left: 16px;
+      font-size: 16px;
+      font-weight: 500;
+      color: @font-title-color;
+    }
+  }
+
+  .line {
+    width: 4px;
+    height: 12px;
+    background: @primary-color;
+  }
+
+  :global {
+    .ant-tabs-top-bar {
+      display: none;
+    }
+  }
+
+  :global {
+    .ant-table-thead > tr > th {
+      padding: @spacer * 0.7 0;
+    }
+    .ant-table-tbody > tr > td {
+      padding: @spacer * 2.5 0;
+      background: #fafafa;
+    }
+    .ant-table-tbody > tr > td:first-child {
+      padding: @spacer * 2.5 @spacer * 0.5 @spacer * 2.5 @spacer * 2;
+    }
+  }
+}
+
+:global {
+  .ant-drawer-content {
+    position: static;
+  }
+  .ant-drawer-wrapper-body {
+    display: flex;
+    flex-direction: column;
+    .ant-drawer-header {
+      padding: 0;
+      border-bottom: none;
+    }
+    .ant-drawer-body {
+      flex: 1;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      .scrollBar();
+    }
+  }
+
+  .ant-drawer-mask {
+    background-color: @mask-color;
+  }
+  .ant-drawer.ant-drawer-open .ant-drawer-mask {
+    opacity: 1;
+    transition: none;
+    animation: none;
+  }
+}
